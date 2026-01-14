@@ -1,4 +1,356 @@
-<html>
-    
-    <P>bách 
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <link
+      rel="stylesheet"
+      href="C:\Users\Admin\Desktop\Project\Hello-Me\templates\css\style.css"
+    />
+    <meta charset="UTF-8" />
+    <title>Website bán quần áo</title>
+    <style>
+      /* ================= RESET ================= */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6f8;
+        color: #1f2933;
+        line-height: 1.6;
+      }
+
+      /* ================= HEADER ================= */
+      header {
+        background: linear-gradient(135deg, #1f2933, #0b47c8);
+        color: #ffffff;
+        padding: 20px;
+        animation: slideDown 0.8s ease;
+      }
+
+      header h1 {
+        margin: 0 0 10px 0;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #38bdf8;
+      }
+
+      /* ================= SECTION (CARD) ================= */
+      section {
+        background: #ffffff;
+        margin: 30px auto;
+        padding: 25px;
+        width: 90%;
+        max-width: 1000px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(8, 236, 84, 0.08);
+        animation: fadeUp 0.8s ease;
+      }
+
+      h2,
+      h3 {
+        color: #111827;
+      }
+
+      /* ================= PRODUCT LIST ================= */
+      ul {
+        padding: 0;
+      }
+
+      ul li {
+        list-style: none;
+        background: #f9fafb;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeUp 1s ease;
+      }
+
+      ul li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ================= FORM ================= */
+      form {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: 500;
+      }
+
+      input {
+        width: 250px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        margin-bottom: 10px;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #871f40;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+      }
+
+      /* ================= BUTTON ================= */
+      button {
+        background: #2563eb;
+        color: #ffffff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      /* ================= TABLE ================= */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        animation: fadeUp 1s ease;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      th {
+        background: #f1f5f9;
+      }
+
+      /* ================= FOOTER ================= */
+      footer {
+        background: #111827;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        animation: fadeUp 1s ease;
+      }
+
+      /* ================= ANIMATION ================= */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <h1>SHOP QUẦN ÁO</h1>
+      <nav>
+        <a href="#home">Trang chủ</a> | <a href="#products">Sản phẩm</a> |
+        <a href="#cart">Giỏ hàng</a> | <a href="#login">Đăng nhập</a> |
+        <a href="#register">Đăng ký</a> | <a href="#profile">Tài khoản</a> |
+        <a href="#admin">Admin</a>
+      </nav>
+      <hr />
+    </header>
+
+    <!-- ================= CLIENT ================= -->
+
+    <!-- Trang chủ -->
+    <section id="home">
+      <h2>Trang chủ</h2>
+      <p>Chào mừng bạn đến với shop quần áo.</p>
+    </section>
+
+    <!-- Danh sách sản phẩm + tìm kiếm -->
+    <section id="products">
+      <h2>Danh sách sản phẩm</h2>
+      <form>
+        <input type="text" placeholder="Tìm kiếm sản phẩm" />
+        <button type="submit">Tìm</button>
+      </form>
+
+      <ul>
+        <li>
+          <h3>Áo thun nam</h3>
+          <p>Giá: 150.000 VNĐ</p>
+          <a href="#product-detail">Xem chi tiết</a>
+        </li>
+        <li>
+          <h3>Quần jean nữ</h3>
+          <p>Giá: 300.000 VNĐ</p>
+          <a href="#product-detail">Xem chi tiết</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Chi tiết sản phẩm -->
+    <section id="product-detail">
+      <h2>Chi tiết sản phẩm</h2>
+      <p>Tên sản phẩm: Áo thun nam</p>
+      <p>Giá: 150.000 VNĐ</p>
+      <p>Mô tả: Áo thun cotton, thoáng mát</p>
+      <button>Thêm vào giỏ hàng</button>
+    </section>
+
+    <!-- Giỏ hàng -->
+    <section id="cart">
+      <h2>Giỏ hàng</h2>
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Hành động</th>
+        </tr>
+        <tr>
+          <td>Áo thun nam</td>
+          <td>150.000</td>
+          <td>1</td>
+          <td><button>Xóa</button></td>
+        </tr>
+      </table>
+      <p>Tổng tiền: 150.000 VNĐ</p>
+      <button>Mua hàng</button>
+    </section>
+
+    <!-- Đăng nhập -->
+    <section id="login">
+      <h2>Đăng nhập</h2>
+      <form>
+        <label>Email:</label><br />
+        <input type="email" /><br /><br />
+        <label>Mật khẩu:</label><br />
+        <input type="password" /><br /><br />
+        <button type="submit">Đăng nhập</button>
+      </form>
+    </section>
+
+    <!-- Đăng ký -->
+    <section id="register">
+      <h2>Đăng ký</h2>
+      <form>
+        <label>Họ tên:</label><br />
+        <input type="text" /><br /><br />
+        <label>Email:</label><br />
+        <input type="email" /><br /><br />
+        <label>Mật khẩu:</label><br />
+        <input type="password" /><br /><br />
+        <button type="submit">Đăng ký</button>
+      </form>
+    </section>
+
+    <!-- Thông tin cá nhân -->
+    <section id="profile">
+      <h2>Thông tin cá nhân</h2>
+      <p>Họ tên: Nguyễn Văn A</p>
+      <p>Email: a@gmail.com</p>
+      <p>Số điện thoại: 0123456789</p>
+    </section>
+
+    <!-- ================= ADMIN ================= -->
+    <section id="admin">
+      <h2>Trang quản trị (Admin)</h2>
+
+      <!-- Quản lý sản phẩm -->
+      <h3>Quản lý sản phẩm</h3>
+      <form>
+        <input type="text" placeholder="Tên sản phẩm" />
+        <input type="number" placeholder="Giá" />
+        <button>Thêm</button>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </form>
+
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>ID</th>
+          <th>Tên</th>
+          <th>Giá</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Áo thun nam</td>
+          <td>150.000</td>
+        </tr>
+      </table>
+
+      <!-- Quản lý khách hàng -->
+      <h3>Quản lý khách hàng</h3>
+      <input type="text" placeholder="Tìm khách hàng" />
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>ID</th>
+          <th>Tên</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nguyễn Văn A</td>
+          <td>a@gmail.com</td>
+        </tr>
+      </table>
+
+      <!-- Quản lý hóa đơn -->
+      <h3>Quản lý hóa đơn</h3>
+      <input type="text" placeholder="Tìm hóa đơn" />
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>Mã hóa đơn</th>
+          <th>Khách hàng</th>
+          <th>Tổng tiền</th>
+        </tr>
+        <tr>
+          <td>HD01</td>
+          <td>Nguyễn Văn A</td>
+          <td>150.000</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <hr />
+      <p>© 2026 - Website bán quần áo (HTML only)</p>
+    </footer>
+  </body>
 </html>
