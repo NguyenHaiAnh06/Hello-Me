@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Shop Quý Ông</title>
  <style>
   * {
     margin: 0;
@@ -130,7 +130,51 @@
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
   }
-  
+  .product {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ánh sáng quét */
+.product::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.25),
+    transparent 70%
+  );
+  animation: lightSweep 6s linear infinite;
+  z-index: -1;
+}
+
+/* Glow mềm phía sau */
+.product::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.25),
+    transparent 70%
+  );
+  z-index: -2;
+  filter: blur(25px);
+}
+@keyframes lightSweep {
+  0% {
+    transform: rotate(0deg) translateX(-50%);
+  }
+  100% {
+    transform: rotate(360deg) translateX(50%);
+  }
+}
+
   body {
     display: flex;
     flex-wrap: wrap;
@@ -138,10 +182,10 @@
     align-items: flex-start;
   }
   
+  
  </style>
 </head>
 <body>
-
             </ul>
                 <button> Mua ngay.</button>
        </div>
@@ -152,7 +196,7 @@
             <li>Màu Xanh Đậm kẻ caro</li>
               <li> Chất liệu  70% Cotton - 10% Poly - 20% Wool</li>
                 <li>Kiểu dệt: Twill</li>
-                   <li>Giá 6.500k.</li>
+                   <li><b>Giá 6.500.000 VND</b></li>
                       </ul>
          <button>Mua ngay.</button>
          </div>
@@ -164,7 +208,7 @@
                   <li>Màu sắc: KẺ BE</li>
                    <li>Chất liệu: 100% wool:len lông cừu</li>
                      <li>Vải lót : 53% polyester, 47 % vicose</li>
-                       <li>Giá 7.000k.</li>
+                       <li>Giá 7.000.000 VND</li>
                          </ul>
                            <button>Mua Ngay.</button>
                         </div>
@@ -176,7 +220,7 @@
                  <li>Màu Đen Nhẹ</li>
               <li>Chất liệu: 100% Cotton - 20% Poly - 20% Wool</li>
             <li>kiểu dệt Will</li>
-               <li>Giá 2.500k.</li>
+               <li>Giá 2.500.000 VND</li>
                  </ul>
                   <button> Mua ngay.</button>
                   </div>
@@ -188,22 +232,83 @@
              <li>Màu trắng Ngọc Trai</li>
                  <li>Chất liệu: 100% Cotton - 20% Poly - 20% Wool</li>
                 <li>Vải lót : 53% polyester, 47 % vicose</li>
-              <li>5.650k.</li>
+              <li><b>5.650.000 VND</b></li>
              </ul>
               <button> Mua ngay.</button>
              </div>
           <div class="product">
-         <div>
           <h3>Áo vest trắng kem kết pha lê sang trọng</h3>
               <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR8XbyqpkaqeeaFzRNe3cjkYnAj59Fq-aPG2IgS4vzxyd34GOgt1S15_heRKXIlf_QIxc5JH-NlLYmIb55XCe5_hiwOoOc4">
                  <ul>
                     <li>Màu trắng </li>
                       <li>Đính kèm Pha Lê sang trọng</li>
                         <li> Chất liệu  70% Cotton - 10% Poly - 20% Wool</li>
-                           <li>Giá 10.000</li>
+                           <li style="color: rgb(10, 10, 10) ;font-style: italic;"><b>Giá 10.000.000 VND</b></li>
                               </ul>
                                  <button>Mua ngay.</button>
                                  </div>
+                                 
+                     <div class="product">
+                      <h3>VEST NAM MÀU HỒNG </h3>
+                      <img src="https://tse1.mm.bing.net/th/id/OIP.cRixCLLxNuZDgE-0aBnAmgHaLH?pid=ImgDet&w=184&h=276&c=7&dpr=1.3&o=7&rm=3">
+                        <ul>
+                          <li>Chất liệu: 85% Poly, 13% Rayon & 2% Spandex</li>
+                          <li>Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li>Ưu điểm: Bền màu, chống nhăn, thấm hút mồ hôi, giữ phom tốt</li>
+                          <li>Giá 6.000.000 VND</li>
+                        </ul>         
+                        <button>Mua Ngay.</button>
+                                 </div>
+
+                          <div class="product">
+                          <h3>VEST NAM SỌC TRẮNG</h3>
+                          <img src="https://tse4.mm.bing.net/th/id/OIP.bvSZQjaSu4YE3pN9MBuWRQHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                          <ul>
+                            <li>Chất liệu: 85% Poly, 13% Rayon & 2% Spandex</li>
+                            <li>Kiểu dáng: Form slimfit ôm vừa người,tôn dáng </li>
+                            <li>Thiết kế tinh tế,lịch lãm.Áo 2 cúc,Chất liệu mịn,đứng phom,sang trọng </li>
+                            <li>Giá 8.000.000 VND</li>
+                          </ul>
+                          <button>Mua Ngay.</button>
+                        </div>
+
+                        <div class="product">
+                        <h3>VEST TÍM NAM</h3>
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.jsWhmO975TlBatp0QyKatgHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                        <ul>
+                          <li>Chất liệu: 28% Rayon, 70% Spun, 2% Spandex</li>
+                          <li>Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li>Thiết kế:Ve áo thiết kế chữ K tinh tế, sang trọng</li>
+                          <li>Ưu điểm: Co dãn đàn hồi tốt, bền màu lâu</li>
+                          <li>Giá 12.450.000 VND</li>
+                        </ul>
+                        <button>Mua Ngay.</button>
+                        </div>
+                        <div class="product">
+                          <h3>VEST ĐEN XÁM NAM</h3>
+                          <img src="https://sakurafashion.vn/upload/a/7581-the-gioi-vest-nam-753.jpg">
+                          <ul>
+                            <li>Chất liệu: 85% Poly, 13% & 2% Spandex</li>
+                            <li>Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                            <li>Thiết kế: Áo ve K tinh tế,sang trọng,có cúc, túi ngực,xẻ 2 tà sau Quần âu basic,2 túi xẻ và 2 túi sau cài khuy</li>
+                            <li>Giá 4.650.000 VND</li>
+                          </ul>
+                          <button> Mua Ngay.</button>
+                        </div>
+
+                        <div class="product">
+                       <h3>VEST NAM KHUY ĐỎ</h3>
+                       <img src="https://tse2.mm.bing.net/th/id/OIP.uDnMec5QoVpCv1GXBullqAAAAA?pid=ImgDet&w=184&h=293&c=7&dpr=1.3&o=7&rm=3">
+                       <ul>
+                          <li>Chất liệu: 28% Rayon, 70% Spun, 2% Spandex</li>
+                          <li>Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li>Thiết kế:Ve áo thiết kế chữ K tinh tế, sang trọng</li>
+                          <li>Ưu điểm: Co dãn đàn hồi tốt, bền màu lâu</li>
+                          <li>Giá 22.450.000 VND</li>
+                        </ul>
+                        <button>Mua Ngay.</button>
+                        </div>
+
        </div>
-      </body>
+      </body> 
     </html>
