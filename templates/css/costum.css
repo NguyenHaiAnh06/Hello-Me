@@ -51,18 +51,22 @@ body {
   padding: 16px;
 
   animation: fadeUp 0.7s ease forwards;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .product:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 15px rgba(212, 175, 55, 0.4);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 0 15px rgba(212, 175, 55, 0.4);
 }
 
 .product h3 {
   font-size: 16px;
   margin: 12px 0 8px;
-  color: #1a1a1a;
+  color: #090909;
 }
 
 .product img {
@@ -74,7 +78,9 @@ body {
   padding: 10px;
   cursor: pointer;
 
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
 
 .product:hover img {
