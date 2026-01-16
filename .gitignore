@@ -1,6 +1,6 @@
 node_modules/
 .env
-<<<<<<< HEAD
+
 index.js
 index.html
 anh.jpg
@@ -10,7 +10,7 @@ laptop.png
 products.html
 base.css
 test.css
-=======
+
 .DS_Store
 conn.js
->>>>>>> 94ff77e70102d241f0f2bf48a348a5d1a2a6f8cc
+
