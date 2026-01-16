@@ -1,33 +1,33 @@
-.wave-text span {
-  display: inline-block;
-  animation: wave 1.5s infinite ease-in-out;
+/* img {
+  transition: 3s;
+}
+input:checked ~ img {
+  /* display: none; */
+/* opacity: 0;
+}
+body {
+  background-color: aqua;
+  transition: all 3s ease;
+} */
+/* #temp {
+  color: red;
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  text-transform: capitalize;
+  font-style: italic; */
+
+.base {
+  color: rgb(228, 6, 209);
+  font-style: oblique;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2;
+}
+p.base_2 {
+  color: rgb(250, 8, 8);
 }
 
-.wave-text span:nth-child(1) {
-  animation-delay: 0s;
-}
-.wave-text span:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.wave-text span:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.wave-text span:nth-child(4) {
-  animation-delay: 0.3s;
-}
-.wave-text span:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.wave-text span:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
-@keyframes wave {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+li.base {
+  color: black;
 }
