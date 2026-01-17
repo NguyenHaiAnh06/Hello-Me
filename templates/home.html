@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Quý Ông</title>
+
 <link rel="stylesheet" href="./css/style.css">
-  <title>Shop Quý Ông</title>
-<link rel="stylesheet" href="../templates/css/costum.css">
-  
+<link rel="stylesheet" href="../templates/css/animation.css">
+
+
+  <title>Document</title>
+<link rel="stylesheet" href="../templates/css/costum.css"> 
+<style>
+    .search-box{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+    .search-box input{
+      width: 220px;
+      padding: 10px 15px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+    }
+  </style>
+
 </head>
 <body>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." onkeyup="searchProduct()">
+    <!-- ngày tháng năm -->
+    <input type="date">
+    <input type="month">
+  </div>
 
        </div>
        <div class="product">
@@ -70,14 +96,14 @@
                               </ul>
                                  <button>Mua ngay.</button>
                                  </div>
-                                 
+
                      <div class="product">
                       <h4 style="text-transform: uppercase; color:#d4af37;">VEST NAM MÀU HỒNG </h4>
                       <img src="https://tse1.mm.bing.net/th/id/OIP.cRixCLLxNuZDgE-0aBnAmgHaLH?pid=ImgDet&w=184&h=276&c=7&dpr=1.3&o=7&rm=3">
                         <ul>
                           <li  style="color:#403c3c;">Chất liệu: 85% Poly, 13% Rayon & 2% Spandex</li>
-                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người</li>
-                          <li  style="color:#403c3c;">Ưu điểm: Bền màu, chống nhăn</li>
+                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li  style="color:#403c3c;">Ưu điểm: Bền màu, chống nhăn, thấm hút mồ hôi, giữ phom tốt</li>
                           <li><b><i>Giá 6.000.000 VND</i></b></li>
                         </ul>         
                         <button>Mua Ngay.</button>
@@ -89,7 +115,7 @@
                           <ul>
                             <li  style="color:#403c3c;">Chất liệu: 85% Poly, 13% Rayon & 2% Spandex</li>
                             <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người,tôn dáng </li>
-                            <li  style="color:#403c3c;">Thiết kế tinh tế,lịch lãm,sang trọng </li>
+                            <li  style="color:#403c3c;">Thiết kế tinh tế,lịch lãm.Áo 2 cúc,Chất liệu mịn,đứng phom,sang trọng </li>
                             <li><b><i>Giá 8.000.000 VND</i></b></li>
                           </ul>
                           <button>Mua Ngay.</button>
@@ -100,8 +126,8 @@
                         <img src="https://tse4.mm.bing.net/th/id/OIP.jsWhmO975TlBatp0QyKatgHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
                         <ul>
                           <li  style="color:#403c3c;">Chất liệu: 28% Rayon, 70% Spun, 2% Spandex</li>
-                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người</li>
-                          <li  style="color:#403c3c;">Thiết kế:Ve áo thiết kế chữ K tinh tế</li>
+                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li  style="color:#403c3c;">Thiết kế:Ve áo thiết kế chữ K tinh tế, sang trọng</li>
                           <li><b><i>Giá 12.450.000 VND</i></b></li>
                         </ul>
                         <button>Mua Ngay.</button>
@@ -112,7 +138,7 @@
                           <ul>
                             <li  style="color:#403c3c;">Chất liệu: 85% Poly, 13% & 2% Spandex</li>
                             <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
-                            <li  style="color:#403c3c;">Thiết kế: Áo ve K tinh tế,sang trọng</li>
+                            <li  style="color:#403c3c;">Thiết kế: Áo ve K tinh tế,sang trọng,có cúc,túi ngực,xẻ 2 tà sau Quần âu basic,2 túi xẻ và 2 túi sau cài khuy</li>
                             <li ><b><i>Giá 4.650.000 VND</i></b></li>
                           </ul>
                           <button> Mua Ngay.</button>
@@ -123,8 +149,8 @@
                        <img src="https://tse2.mm.bing.net/th/id/OIP.uDnMec5QoVpCv1GXBullqAAAAA?pid=ImgDet&w=184&h=293&c=7&dpr=1.3&o=7&rm=3">
                        <ul>
                           <li  style="color:#403c3c;">Chất liệu: 28% Rayon, 70% Spun, 2% Spandex</li>
-                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người</li>
-                          <li  style="color:#403c3c;">Thiết kế:Ve áo thiết kế chữ K tinh tế</li>
+                          <li  style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
+                          <li  style="color:#403c3c;">Thiết kế:Ve áo thiết kế chữ K tinh tế, sang trọng</li>
                           <li><i><b>Giá 22.450.000 VND</b></i></li>
                         </ul>
                         <button>Mua Ngay.</button>
@@ -256,7 +282,7 @@
                             <ul>
                           <li style="color:#403c3c;">Chất liệu: 85% Poly, 13% Rayon & 2% Spandex</li>
                           <li style="color:#403c3c;">Kiểu dáng: Form slimfit ôm vừa người, tôn dáng </li>
-                          <li style="color:#403c3c;">Ưu điểm: Bền màu, chống nhăn</li>
+                          <li style="color:#403c3c;">Ưu điểm: Bền màu, chống nhăn, thấm hút mồ hôi, giữ phom tốt</li>
                           <li><b><i>Giá 600.000 VND</i></b></li>
                         </ul>         
                         <button>Mua Ngay.</button>
@@ -317,7 +343,7 @@
                             <h4 style="text-transform: uppercase; color:#d4af37;">CÀ VẠT ĐEN.</h4>
                             <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcScTi1aU77a6LeQpGj63ixmYhiC1kg_ylNe0imG-erRCn41MTcOWG3OyWDDD_qCrD3TxYe_xj79Tb0DoDiNiUG_jKc_L_RZwKCNQ6nVmDet_idCw0PmggBGSH4qX8nKBvveVLJ8Moi-hA&usqp=CAc">
                             <ul>
-                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng</li>
+                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng cho phái mạnh</li>
                               <li style="color:#403c3c;">Sản phẩm đã được kiểm chọn đảm bảo độ thoải mái</li>
                               <li style="color:#403c3c;">Phù hợp với dáng người và dễ phối cùng áo sơ mi, vest.</li>
                               <li><b><i>Giá 80.000 VND.</i></b></li>
@@ -329,7 +355,7 @@
                             <h4 style="text-transform: uppercase; color:#d4af37;">CÀ VẠT ĐỎ.</h4>
                             <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSXmK9NfTQXJ5zQjDLgmiBAgvS6O7tgTMB0xnUpc4-qIz2UrcmHXf86ltsib67CPM0RptCJ82oPGd3Q4MgmFpIG4D1vOzLIlAV3G2x0NrqBcAfw61qmfj7tYB-doKc5OiYtW3Y4JDDC&usqp=CAc">
                             <ul>
-                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng </li>
+                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng cho phái mạnh</li>
                               <li style="color:#403c3c;">Sản phẩm đã được kiểm chọn đảm bảo độ thoải mái</li>
                               <li style="color:#403c3c;">Phù hợp với dáng người và dễ phối cùng áo sơ mi, vest.</li>
                               <li><i><b>Giá 70.000 VND.</b></i></li>
@@ -341,7 +367,7 @@
                             <h4 style="text-transform: uppercase; color:#d4af37;">CÀ VẠT XANH. </h4>
                             <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT4O6F8NXvriMdjUt4OIpaQ3lp4zHCYDOBaY6FECKyA--NbY20kzKSihotcEWnefqAZWWipbDCTdB7IH7vNx1hf2YchreCkZHwi_04YXUol1l2i1z4DU6K7bmzPUk4srwVOGyDVO57B&usqp=CAc">
                            <ul>
-                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng</li>
+                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng cho phái mạnh</li>
                               <li style="color:#403c3c;">Sản phẩm đã được kiểm chọn đảm bảo độ thoải mái</li>
                               <li style="color:#403c3c;">Phù hợp với dáng người và dễ phối cùng áo sơ mi, vest.</li>
                               <li><b><i>Giá 90.000 VND.</i></b></li>
@@ -353,7 +379,7 @@
                             <h4 style="text-transform: uppercase; color:#d4af37;">CÀ VẠT ĐỎ CHẤM BI.</h4>
                             <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuZs3tLye0RGOWREdyc9e4vnjVjQYLgMoRmaf50pMPgeTMo7Si86fkf9uK_oWlMqKe6_5dUUKAxQZx6oxMeXK10mGEu1VYBLBX42rViVtj7CEXPYfW6tNK21KaQ-gKZYX1ByFaAZVE&usqp=CAc">
                             <ul>
-                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng</li>
+                              <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng cho phái mạnh</li>
                               <li style="color:#403c3c;">Sản phẩm đã được kiểm chọn đảm bảo độ thoải mái</li>
                               <li style="color:#403c3c;">Phù hợp với dáng người và dễ phối cùng áo sơ mi, vest.</li>
                               <li><b><i>Giá 100.000 VND.</i></b></li>
@@ -362,7 +388,7 @@
                            </div>
                            
                            <div class="product">
-                            <h4 style="text-transform: uppercase; color:#d4af37;">Cà Vạt Họa Tiết Xanh.</h4>
+                            <h4 style="text-transform: uppercase; color:#d4af37;">Cà Vạt Họa Tiết Màu Xanh.</h4>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiHrL9TqMsT2Cesfw2BlHoV6g1EGL4K94tCw&s">
                             <ul>
                               <li style="color:#403c3c;"> Mang đến vẻ ngoài trang trọng cho phái mạnh</li>
@@ -396,6 +422,17 @@
                                 </ul>
                             <button>Mua Ngay.</button>
                            </div>       
+                           <script>
+                             function searchProduct() {
+                              let input = document.getElementById("searchInput").value.toLowerCase();
+                                let products = document.querySelectorAll(".product");
+
+                  products.forEach(p => {
+                     let text = p.innerText.toLowerCase();
+                   p.style.display = text.includes(input) ? "block" : "none";
+                           });
+                               }
+       </script>
        </div>
       </body> 
     </html>
