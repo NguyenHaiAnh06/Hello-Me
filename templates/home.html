@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Quý Ông</title>
+
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="../templates/css/animation.css">
+
 
   <title>Document</title>
 <link rel="stylesheet" href="../templates/css/costum.css"> 
@@ -29,6 +32,9 @@
 <body>
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." onkeyup="searchProduct()">
+    <!-- ngày tháng năm -->
+    <input type="date">
+    <input type="month">
   </div>
 
        </div>
@@ -417,16 +423,16 @@
                             <button>Mua Ngay.</button>
                            </div>       
                            <script>
-function searchProduct() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let products = document.querySelectorAll(".product");
+                             function searchProduct() {
+                              let input = document.getElementById("searchInput").value.toLowerCase();
+                                let products = document.querySelectorAll(".product");
 
-  products.forEach(p => {
-    let text = p.innerText.toLowerCase();
-    p.style.display = text.includes(input) ? "block" : "none";
-  });
-}
-</script>
+                  products.forEach(p => {
+                     let text = p.innerText.toLowerCase();
+                   p.style.display = text.includes(input) ? "block" : "none";
+                           });
+                               }
+       </script>
        </div>
       </body> 
     </html>
