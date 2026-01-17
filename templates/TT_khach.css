@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.box {
+  width: 350px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.box a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form {
+  display: none;
+}
+
+.form:target {
+  display: block;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.forgot,
+.back {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #0c2948;
+}
+
+.forgot:hover,
+.back:hover {
+  text-decoration: underline;
+}
