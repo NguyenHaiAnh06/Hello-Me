@@ -1,33 +1,57 @@
-/* img {
-  transition: 3s;
-}
-input:checked ~ img {
-  /* display: none; */
-/* opacity: 0;
-}
-body {
-  background-color: aqua;
-  transition: all 3s ease;
-} */
-/* #temp {
-  color: red;
-  font-size: larger;
-  font-family: "Times New Roman", Times, serif;
-  line-height: 1.5;
-  text-transform: capitalize;
-  font-style: italic; */
-
-.base {
-  color: rgb(228, 6, 209);
-  font-style: oblique;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 2;
-}
-p.base_2 {
-  color: rgb(250, 8, 8);
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(to right, #1f2f38, #2c4654);
+  padding: 18px 40px;
+  border-collapse: collapse;
 }
 
-li.base {
-  color: black;
+.header td {
+  vertical-align: middle;
+}
+
+/* LOGO */
+.logo strong {
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+/* MENU GIỮA */
+.menu {
+  text-align: center;
+}
+
+.menu a {
+  margin: 0 14px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #ffffff;
+  color: #1f2f38;
+}
+
+/* GIỎ HÀNG & AUTH */
+.auth {
+  text-align: right;
+  color: #ffffff;
+}
+
+.auth a {
+  margin-left: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth a:hover {
+  color: #f1c40f;
+}
+
+.cart {
+  margin-right: 6px;
 }
