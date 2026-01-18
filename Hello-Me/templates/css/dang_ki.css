@@ -1,0 +1,162 @@
+/* ===============================
+   AUTH BASIC – KHÔNG XUNG ĐỘT
+=============================== */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* WRAPPER */
+.auth-wrapper {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 300% 300%;
+  animation: gradientMove 14s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* LIGHT */
+.auth-wrapper::before,
+.auth-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.auth-wrapper::before {
+  width: 520px;
+  height: 520px;
+  left: -150px;
+  top: 20%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 160, 0.18),
+    transparent 70%
+  );
+  filter: blur(90px);
+  animation: lightLeft 18s ease-in-out infinite;
+}
+
+.auth-wrapper::after {
+  width: 380px;
+  height: 380px;
+  right: -130px;
+  bottom: 12%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 170, 255, 0.14),
+    transparent 70%
+  );
+  filter: blur(90px);
+  animation: lightRight 22s ease-in-out infinite;
+}
+
+@keyframes lightLeft {
+  50% {
+    transform: translate(50px, -40px) scale(1.1);
+  }
+}
+
+@keyframes lightRight {
+  50% {
+    transform: translate(-40px, 30px) scale(1.12);
+  }
+}
+
+/* FORM BOX */
+.auth-box {
+  width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 2;
+  animation: floatIn 0.6s ease;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TITLE */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  color: #0c2948;
+}
+
+/* INPUT */
+.auth-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-box input:focus {
+  border-color: #0c2948;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(12, 41, 72, 0.15);
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0c2948;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: #081b30;
+}
+
+/* LINK */
+.auth-box .link {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: #0c2948;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.auth-box .link:hover {
+  text-decoration: underline;
+}
