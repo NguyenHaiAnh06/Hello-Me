@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Auth</title>
 
-    <!-- CSS CHUNG WEBSITE -->
     <link rel="stylesheet" href="./css/dang_ki.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/base.css" />
@@ -19,33 +18,42 @@
     />
   </head>
   <body>
-    <!-- HEADER -->
-    <div class="header">
-      <div class="header-row">
-        <div class="logo">THỜI TRANG MEN</div>
-        <div class="auth">
-          <a href="home.html">Home</a>
-          <a href="vest.html">Vest</a>
-          <a href="quan.html">Quần</a>
-          <a href="ca_vat.html">Cà Vạt</a>
-          <a href="ao_so_mi.html">Áo Sơ Mi</a>
-          <a href="#">Giỏ Hàng</a>
-          <a href="TT_khach.html">Đăng nhập</a>
-          <a href="dang_ky.html">Đăng Ký</a>
-        </div>
-      </div>
-    </div>
-
     <div class="auth-wrapper">
-      <div class="auth-box">
-        <h2>ĐĂNG KÝ</h2>
-        <input type="text" placeholder="Họ và tên" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Mật khẩu" />
-        <input type="password" placeholder="Nhập lại mật khẩu" />
-        <button>Đăng ký</button>
-        <a href="dang_nhap.html" class="link">← Quay lại đăng nhập</a>
-      </div>
-    </div>
+  <form class="auth-box" id="registerForm">
+    <h2>ĐĂNG KÝ</h2>
+
+    <input
+      type="text"
+      name="username"
+      placeholder="Họ và tên"
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+    />
+
+    <input
+      type="password"
+      name="password"
+      placeholder="Mật khẩu"
+      required
+    />
+
+    <input
+    type="password"
+    name="confirm_password"
+    placeholder="Nhập lại mật khẩu"
+    required
+  />
+
+    <button type="submit">Đăng ký</button>
+    <a href="dang_nhap.html" class="link">← Quay lại đăng nhập</a>
+  </form>
+</div>
+<script src="/js/register.js"></script>
   </body>
 </html>

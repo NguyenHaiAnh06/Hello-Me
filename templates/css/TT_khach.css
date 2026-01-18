@@ -1,5 +1,6 @@
 .auth-wrapper {
-  min-height: calc(100vh - 80px); /* trừ chiều cao header */
+  min-height: calc(100vh - 80px);
+  /* trừ chiều cao header */
   background: radial-gradient(circle at top, #1e3a5f, #071a2f);
   display: flex;
   align-items: center;
@@ -59,7 +60,7 @@
   display: block;
 }
 
-#register:target ~ #login {
+#register:target~#login {
   display: none;
 }
 
@@ -67,13 +68,15 @@
   display: block;
 }
 
-#login:target ~ #register {
+#login:target~#register {
   display: none;
 }
+
 /* RESET layout cho trang auth */
 body {
   margin: 0;
-  display: block; /* chặn flex từ CSS khác */
+  display: block;
+  /* chặn flex từ CSS khác */
 }
 
 /* AUTH luôn full màn hình */
@@ -90,6 +93,7 @@ body {
 .auth-box {
   margin: 0 auto;
 }
+
 /* ===============================
    FONT + HEADER + AUTH ANIMATION
    DÁN CUỐI FILE TT_khach.css
@@ -237,7 +241,7 @@ body {
   display: block;
 }
 
-#register:target ~ #login {
+#register:target~#login {
   display: none;
 }
 
@@ -245,7 +249,7 @@ body {
   display: block;
 }
 
-#login:target ~ #register {
+#login:target~#register {
   display: none;
 }
 
@@ -255,6 +259,7 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -266,11 +271,13 @@ body {
     opacity: 0;
     transform: scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 .auth-wrapper {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-size: 300% 300%;
@@ -281,9 +288,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -299,6 +308,7 @@ body {
     opacity: 0;
     transform: translateY(25px) scale(0.97);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -337,6 +347,7 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(12, 41, 72, 0.3);
 }
+
 .auth-wrapper {
   position: relative;
   overflow: hidden;
@@ -348,11 +359,9 @@ body {
   position: absolute;
   width: 480px;
   height: 480px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.18),
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0) 70%);
   top: 15%;
   left: -120px;
   filter: blur(60px);
@@ -365,16 +374,15 @@ body {
   position: absolute;
   width: 360px;
   height: 360px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.14),
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0) 70%);
   bottom: 10%;
   right: -100px;
   filter: blur(70px);
   pointer-events: none;
 }
+
 /* ==================================================
    LUXURY MOVING LIGHT BACKGROUND – ADMIN / AUTH
    Chỉ cần dán, không sửa layout cũ
@@ -392,11 +400,9 @@ body {
   position: absolute;
   width: 520px;
   height: 520px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 215, 160, 0.18),
-    rgba(255, 215, 160, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 215, 160, 0.18),
+      rgba(255, 215, 160, 0) 70%);
   top: 18%;
   left: -150px;
   filter: blur(80px);
@@ -410,11 +416,9 @@ body {
   position: absolute;
   width: 380px;
   height: 380px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 170, 255, 0.14),
-    rgba(120, 170, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(120, 170, 255, 0.14),
+      rgba(120, 170, 255, 0) 70%);
   bottom: 12%;
   right: -130px;
   filter: blur(90px);
@@ -428,10 +432,12 @@ body {
     transform: translate(0, 0) scale(1);
     opacity: 0.6;
   }
+
   50% {
     transform: translate(45px, -35px) scale(1.08);
     opacity: 0.85;
   }
+
   100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.6;
@@ -443,10 +449,12 @@ body {
     transform: translate(0, 0) scale(1);
     opacity: 0.5;
   }
+
   50% {
     transform: translate(-35px, 30px) scale(1.12);
     opacity: 0.8;
   }
+
   100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.5;
@@ -458,6 +466,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 /* ===============================
    MOUSE LIGHT FOLLOW (LUXURY)
 =============================== */
@@ -515,20 +524,16 @@ body {
 
 /* ADMIN – tối, quyền lực */
 .auth-wrapper.admin::before {
-  background: radial-gradient(
-    circle,
-    rgba(255, 215, 160, 0.14),
-    rgba(255, 215, 160, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 215, 160, 0.14),
+      rgba(255, 215, 160, 0) 70%);
   filter: blur(110px);
 }
 
 .auth-wrapper.admin::after {
-  background: radial-gradient(
-    circle,
-    rgba(80, 130, 200, 0.1),
-    rgba(80, 130, 200, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(80, 130, 200, 0.1),
+      rgba(80, 130, 200, 0) 70%);
 }
 
 /* KHÁCH – sáng hơn */

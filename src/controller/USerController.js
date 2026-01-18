@@ -1,22 +1,35 @@
 // TT nguoi dung
-const express = require("express");
-const router = express.Router();
+const bcrypt = require('bcrypt');
+const db = require('../database/conn');
 
-const db = require("../database/conn");
+exports.register = async (req, res) => {
+    const { username, email, password } = req.body;
 
-router.post("/register", (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) {
-        return res.status(400).json({ message: "Vui lòng nhập đầy đủ thông tin" });
+
+    if (!username || !email || !password) {
+        return res.json({ message: '❌ Thiếu dữ liệu' });
     }
-    const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-    db.query(sql, [username, password], (err, results) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).json({ message: "Lỗi đăng ký thành viên" });
-        }
-        return res.status(200).json({ message: "Đăng ký thành công!" });
-    });
-});
-module.exports = router;
 
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const sql = `
+      INSERT INTO users (username, email, password)
+      VALUES (?, ?, ?)
+    `;
+
+        db.query(sql, [username, email, hashedPassword], (err) => {
+            if (err) {
+                console.error(err);
+                return res.json({ message: '❌ Lỗi đăng ký' });
+            }
+
+            res.json({ message: '✅ Đăng ký thành công' });
+        });
+
+
+    } catch (err) {
+        console.error(err);
+        res.json({ message: '❌ Lỗi server' });
+    }
+};

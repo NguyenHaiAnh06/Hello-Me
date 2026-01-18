@@ -37,31 +37,27 @@
         </div>
       </div>
     </div>
+<div class="auth-wrapper">
+    <div class="auth-box">
+        <form id="registerForm" class="auth-form" style="display: none;">
+            <h2>ĐĂNG KÝ</h2>
+            <input type="text" name="username" placeholder="Họ và tên">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Mật khẩu">
+            <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu">
+            <button type="submit">Đăng ký</button>
+            <a href="#login" class="link-switch">Quay lại đăng nhập</a>
+        </form>
 
-    <!-- AUTH -->
-    <div class="auth-wrapper">
-      <div class="auth-box">
-        <!-- REGISTER -->
-        <div id="register" class="auth-form">
-          <h2>ĐĂNG KÝ</h2>
-          <input type="text" placeholder="Họ và tên" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Mật khẩu" />
-          <input type="password" placeholder="Nhập lại mật khẩu" />
-          <button>Đăng ký</button>
-          <a href="#login" class="link">← Quay lại đăng nhập</a>
-        </div>
-
-        <!-- LOGIN -->
-        <div id="login" class="auth-form">
-          <h2>ĐĂNG NHẬP</h2>
-          <input type="text" placeholder="Email / Username" />
-          <input type="password" placeholder="Mật khẩu" />
-          <button>Đăng nhập</button>
-          <a href="#register" class="link">Chưa có tài khoản?</a>
-        </div>
-      </div>
+        <form id="loginForm" class="auth-form">
+            <h2>ĐĂNG NHẬP</h2>
+            <input type="text" name="username" placeholder="Email / Username">
+            <input type="password" name="password" placeholder="Mật khẩu">
+            <button type="submit">Đăng nhập</button>
+            <a href="#register" class="link-switch">Chưa có tài khoản?</a>
+        </form>
     </div>
+</div>
     <div class="auth-wrapper admin">
     <script>
       const auth = document.querySelector(".auth-wrapper");
@@ -72,5 +68,23 @@
         auth.style.setProperty("--my", e.clientY - rect.top + "px");
       });
     </script>
+    <script src="/js/register.js"></script>
+    <script>
+  const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+
+document.querySelector('a[href="#register"]').addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+});
+
+document.querySelector('a[href="#login"]').addEventListener('click', (e) => {
+    e.preventDefault();
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+});
+</script>
+<script src="/js/login.js"></script>
   </body>
 </html>
