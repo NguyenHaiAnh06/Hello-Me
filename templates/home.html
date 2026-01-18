@@ -23,9 +23,10 @@
           <a href="quan.html">quần</a>
           <a href="ca_vat.html">cà vạt</a>
           <a href="ao_so_mi.html">áo sơ mi</a>
-          <a href="#">Đăng ký</a>
-          <a href="#">Đăng nhập</a>
           <a href="#">Thêm giỏ hàng</a>
+          <a href="TT_khach.html">Đăng nhập</a>
+          <a href="TT_khach.html">Đăng Ký</a>
+
         </div>
       </div>
     </div>
@@ -427,5 +428,42 @@
                                }
        </script>
        </div>
+       <script> 
+<script>
+const regForm = document.getElementById("registerForm"); 
+if(regForm) {
+    regForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const username = document.getElementById("reg_username").value;
+        const password = document.getElementById("reg_password").value;
+        fetch("http://localhost:3000/register", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ username, password })
+        })
+        .then(res => res.json())
+        .then(data => alert(data.message));
+    });
+}
+const logForm = document.getElementById("loginForm");
+if(logForm) {
+    logForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const username = document.getElementById("login_username").value; 
+        const password = document.getElementById("login_password").value;
+        fetch("http://localhost:3000/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ username, password })
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert(data.message);
+            if(data.message === "Đăng nhập thành công") window.location.reload();
+        });
+    });
+}
+</script>
+      </script>
       </body> 
     </html>

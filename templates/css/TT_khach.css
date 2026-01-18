@@ -1,0 +1,54 @@
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+/* ===== KHUNG ===== */
+.box {
+  width: 350px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ===== NÚT ===== */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* ===== FORM (QUAN TRỌNG) ===== */
+.form {
+  display: none; /* ẨN TẤT CẢ */
+}
+
+.form:target {
+  display: block; /* CHỈ HIỆN FORM ĐƯỢC BẤM */
+}
+
+/* ===== INPUT & BUTTON ===== */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
