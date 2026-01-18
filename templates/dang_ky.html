@@ -7,8 +7,6 @@
     <!-- CSS CHUNG WEBSITE -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/base.css" />
-
-    <!-- file auth của bạn mình đẻ là tt khách cơ -->
     <link rel="stylesheet" href="./css/TT_khach.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
@@ -19,7 +17,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-
   <body>
     <!-- HEADER -->
     <div class="header">
@@ -38,8 +35,7 @@
       </div>
     </div>
 
-    <!-- AUTH -->
-    <div class="auth-wrapper">
+        <div class="auth-wrapper">
       <div class="auth-box">
         <!-- REGISTER -->
         <div id="register" class="auth-form">
@@ -51,26 +47,5 @@
           <button>Đăng ký</button>
           <a href="#login" class="link">← Quay lại đăng nhập</a>
         </div>
-
-        <!-- LOGIN -->
-        <div id="login" class="auth-form">
-          <h2>ĐĂNG NHẬP</h2>
-          <input type="text" placeholder="Email / Username" />
-          <input type="password" placeholder="Mật khẩu" />
-          <button>Đăng nhập</button>
-          <a href="#register" class="link">Chưa có tài khoản?</a>
-        </div>
-      </div>
-    </div>
-    <div class="auth-wrapper admin">
-    <script>
-      const auth = document.querySelector(".auth-wrapper");
-
-      auth.addEventListener("mousemove", (e) => {
-        const rect = auth.getBoundingClientRect();
-        auth.style.setProperty("--mx", e.clientX - rect.left + "px");
-        auth.style.setProperty("--my", e.clientY - rect.top + "px");
-      });
-    </script>
   </body>
 </html>

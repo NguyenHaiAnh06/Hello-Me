@@ -107,14 +107,14 @@ body {
   cursor: pointer;
 
   background: linear-gradient(135deg, #b9935a, #d4af37);
-  color: #fff;
+  color: #cd4242;
   font-weight: bold;
 }
 
 .img-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(5, 5, 5, 0.85);
   display: none;
   align-items: center;
   justify-content: center;
@@ -132,7 +132,7 @@ body {
   top: 20px;
   right: 30px;
   font-size: 40px;
-  color: #fff;
+  color: #070707;
   cursor: pointer;
 }
 
