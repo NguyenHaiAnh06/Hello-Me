@@ -1,0 +1,541 @@
+.auth-wrapper {
+  min-height: calc(100vh - 80px); /* trừ chiều cao header */
+  background: radial-gradient(circle at top, #1e3a5f, #071a2f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-box {
+  width: 420px;
+  background: #faf7f7;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0c2948;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0c2948;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.auth-box .link {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: #0c2948;
+  text-decoration: none;
+}
+
+/* FORM SWITCH */
+.auth-form {
+  display: none;
+}
+
+#login {
+  display: block;
+}
+
+#register:target {
+  display: block;
+}
+
+#register:target ~ #login {
+  display: none;
+}
+
+#login:target {
+  display: block;
+}
+
+#login:target ~ #register {
+  display: none;
+}
+/* RESET layout cho trang auth */
+body {
+  margin: 0;
+  display: block; /* chặn flex từ CSS khác */
+}
+
+/* AUTH luôn full màn hình */
+.auth-wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ÉP form vào giữa tuyệt đối */
+.auth-box {
+  margin: 0 auto;
+}
+/* ===============================
+   FONT + HEADER + AUTH ANIMATION
+   DÁN CUỐI FILE TT_khach.css
+================================ */
+
+/* ---------- RESET NHẸ ---------- */
+body {
+  margin: 0;
+  display: block;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: linear-gradient(to right, #0c2948, #071a2f);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* MENU */
+.header .auth a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dbe4f0;
+  margin-left: 18px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header .auth a:hover {
+  color: #ffffff;
+}
+
+/* gạch chân hover */
+.header .auth a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.header .auth a:hover::after {
+  width: 100%;
+}
+
+/* ---------- AUTH WRAPPER ---------- */
+.auth-wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  background: radial-gradient(circle at top, #1e3a5f, #71a2d9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- AUTH BOX ---------- */
+.auth-box {
+  width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  animation: pop 0.45s ease;
+}
+
+/* TITLE */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  color: #0c2948;
+}
+
+/* INPUT */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.auth-box input:focus {
+  border-color: #0c2948;
+  box-shadow: 0 0 0 2px rgba(12, 41, 72, 0.15);
+  outline: none;
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #020b4c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-box button:hover {
+  background: #081b30;
+  transform: translateY(-1px);
+}
+
+/* LINK */
+.auth-box .link {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: #0c2948;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.auth-box .link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- FORM SWITCH ---------- */
+.auth-form {
+  display: none;
+  animation: fadeSlide 0.4s ease;
+}
+
+#login {
+  display: block;
+}
+
+#register:target {
+  display: block;
+}
+
+#register:target ~ #login {
+  display: none;
+}
+
+#login:target {
+  display: block;
+}
+
+#login:target ~ #register {
+  display: none;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.auth-wrapper {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ---------- AUTH BOX HIỆU ỨNG XUẤT HIỆN ---------- */
+.auth-box {
+  animation: floatIn 0.6s ease;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- INPUT ICON ---------- */
+.auth-box input {
+  padding-left: 42px;
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-size: 16px;
+}
+
+/* ICON THEO TYPE */
+.auth-box input[type="text"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%230c2948' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm89.6 32h-11.1c-22.2 10.2-46.8 16-78.5 16s-56.3-5.8-78.5-16h-11.1C60.2 288 0 348.2 0 421.6 0 469.3 38.7 512 86.4 512h275.2c47.7 0 86.4-42.7 86.4-90.4 0-73.4-60.2-133.6-134.4-133.6z'/%3E%3C/svg%3E");
+}
+
+.auth-box input[type="email"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%230c2948' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M502.3 190.8 327.4 338c-15.9 13.2-39 13.2-54.9 0L9.7 190.8C3.9 186.2 0 179.1 0 171.4V72c0-39.8 32.2-72 72-72h368c39.8 0 72 32.2 72 72v99.4c0 7.7-3.9 14.8-9.7 19.4z'/%3E%3C/svg%3E");
+}
+
+.auth-box input[type="password"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%230c2948' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M400 224h-24v-72C376 68.1 307.9 0 224 0S72 68.1 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zM224 64c48.6 0 88 39.4 88 88v72H136v-72c0-48.6 39.4-88 88-88z'/%3E%3C/svg%3E");
+}
+
+/* ---------- INPUT FOCUS HIỆU ỨNG ---------- */
+.auth-box input:focus {
+  border-color: #0c2948;
+  box-shadow: 0 0 0 2px rgba(12, 41, 72, 0.18);
+}
+
+/* ---------- NÚT BẤM CÓ ĐỘ NẢY ---------- */
+.auth-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(12, 41, 72, 0.3);
+}
+.auth-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ánh sáng lớn bên trái */
+.auth-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 15%;
+  left: -120px;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Ánh sáng nhỏ bên phải */
+.auth-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0) 70%
+  );
+  bottom: 10%;
+  right: -100px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+/* ==================================================
+   LUXURY MOVING LIGHT BACKGROUND – ADMIN / AUTH
+   Chỉ cần dán, không sửa layout cũ
+================================================== */
+
+/* Đảm bảo nền có không gian cho ánh sáng */
+.auth-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ánh sáng chính (trôi chậm – sang) */
+.auth-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 160, 0.18),
+    rgba(255, 215, 160, 0) 70%
+  );
+  top: 18%;
+  left: -150px;
+  filter: blur(80px);
+  animation: luxuryLightLeft 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Ánh sáng phụ (thở nhẹ) */
+.auth-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 170, 255, 0.14),
+    rgba(120, 170, 255, 0) 70%
+  );
+  bottom: 12%;
+  right: -130px;
+  filter: blur(90px);
+  animation: luxuryLightRight 22s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Chuyển động ánh sáng */
+@keyframes luxuryLightLeft {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(45px, -35px) scale(1.08);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes luxuryLightRight {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-35px, 30px) scale(1.12);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Ưu tiên form nổi lên trên ánh sáng */
+.auth-box {
+  position: relative;
+  z-index: 2;
+}
+/* ===============================
+   MOUSE LIGHT FOLLOW (LUXURY)
+=============================== */
+
+.auth-wrapper {
+  --mx: 50%;
+  --my: 50%;
+}
+
+/* ánh sáng theo chuột
+.auth-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  left: calc(var(--mx) - 260px);
+  top: calc(var(--my) - 260px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 160, 0.22),
+    rgba(255, 215, 160, 0) 70%
+  );
+  filter: blur(90px);
+  transition:
+    left 0.4s ease,
+    top 0.4s ease;
+  pointer-events: none;
+}
+
+/* ánh sáng phụ đứng yên nhẹ */
+/* .auth-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  bottom: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 170, 255, 0.14),
+    rgba(120, 170, 255, 0) 70%
+  );
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+/* form luôn nổi trên ánh sáng */
+/* .auth-box {
+  position: relative;
+  z-index: 2;
+}  */
+/* ===============================
+   ADMIN vs KHÁCH
+=============================== */
+
+/* ADMIN – tối, quyền lực */
+.auth-wrapper.admin::before {
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 160, 0.14),
+    rgba(255, 215, 160, 0) 70%
+  );
+  filter: blur(110px);
+}
+
+.auth-wrapper.admin::after {
+  background: radial-gradient(
+    circle,
+    rgba(80, 130, 200, 0.1),
+    rgba(80, 130, 200, 0) 70%
+  );
+}
+
+/* KHÁCH – sáng hơn */
+.auth-wrapper:not(.admin)::before {
+  opacity: 0.9;
+}
+
+.auth-wrapper:not(.admin)::after {
+  opacity: 0.7;
+}

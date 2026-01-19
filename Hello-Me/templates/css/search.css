@@ -1,0 +1,15 @@
+.search-box {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.search-box input {
+  width: 220px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #cdcdcd;
+  outline: none;
+  font-size: 14px;
+}
