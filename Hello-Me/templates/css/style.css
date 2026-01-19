@@ -10,7 +10,7 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-size: 300% 300%;
   animation: luxuryBG 12s ease infinite;
-  color: #515151;
+  color: #656565;
 }
 
 @keyframes luxuryBG {

@@ -17,7 +17,7 @@ body {
   position: relative;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #0e1e24, #203a43, #2c5364);
+  background: linear-gradient(135deg, #0c1a1f, #203a43, #2c5364);
   background-size: 300% 300%;
   animation: gradientMove 14s ease infinite;
 }

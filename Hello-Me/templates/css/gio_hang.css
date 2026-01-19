@@ -36,7 +36,7 @@ body::after {
 }
 
 .header {
-  background: linear-gradient(to right, #1d6fa3, #47a1dd);
+  background: linear-gradient(to right, #1a699a, #47a1dd);
   padding: 14px 30px;
   position: relative;
   z-index: 2;
